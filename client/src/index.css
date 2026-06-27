@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-industrial-bg text-industrial-text font-sans antialiased overflow-x-hidden;
+  }
+
+  /* Touch accessibility states and focus states */
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    @apply outline-none ring-2 ring-industrial-amber ring-offset-2 ring-offset-industrial-bg;
+  }
+}
+
+/* Clean industrial-style scrollbar mapping to graphite/steel color tokens */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121315;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2D2E30;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3E4042;
+}
+
+/* Chrome/Safari utility overrides to avoid styling overrides on input fields */
+input, select, textarea {
+  background-color: #1C1D1F;
+  border-color: #333538;
+}
