@@ -26,3 +26,6 @@ db.json
 .vscode/
 .idea/
 .DS_Store
+
+# Office temporary lock files
+~$*
